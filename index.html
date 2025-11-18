@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  !-- Google Search Console Verification -->
+
+  <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="-1sPuuTLXhukNYl_ngZzxg7sycv13w64fpG9dLmPGZc" />
+
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>XatekStudio — Premium Websites</title>
   <meta name="description" content="XatekStudio — premium-looking, fast & affordable websites for small businesses. Based in Bangladesh." />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  
   <style>
     :root{
       --bg:#070606;
@@ -20,7 +23,6 @@
       --maxw:1100px;
     }
 
-    /* Reset + base */
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
@@ -28,14 +30,11 @@
       font-family:Lato, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
       background:linear-gradient(180deg,var(--bg),#050505 120%);
       color:var(--muted);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
       line-height:1.6;
     }
 
-    /* Container + layout */
     .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 6px;background:transparent;position:sticky;top:12px;z-index:60}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 6px;position:sticky;top:12px;z-index:60}
     .brand {display:flex;align-items:center;gap:12px}
     .brand .title{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:20px;font-weight:700}
     nav{display:flex;gap:10px;align-items:center}
@@ -43,64 +42,54 @@
     .nav-link:hover{color:var(--gold-2);background:rgba(255,215,0,0.03)}
     .cta-btn{background:linear-gradient(180deg,var(--gold),var(--gold-2));color:#080600;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
 
-    /* Mobile menu */
     .menu-toggle{display:none;background:transparent;border:0;color:var(--muted);font-size:22px}
     .mobile-nav{display:none;flex-direction:column;gap:8px;padding:14px 6px}
 
-    /* Hero */
     .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:18px}
     .card{background:linear-gradient(180deg,var(--panel),rgba(255,255,255,0.02));padding:28px;border-radius:var(--radius);box-shadow:0 20px 50px rgba(0,0,0,0.6)}
     h1{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:36px;margin:0}
     p.lead{color:rgba(255,255,255,0.85);margin:10px 0 0;font-size:16px}
 
-    /* Features */
     .features{display:flex;flex-direction:column;gap:12px;margin-top:16px}
     .feature{display:flex;gap:12px;align-items:flex-start}
     .dot{width:46px;height:46px;border-radius:10px;background:var(--glass);display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:700}
 
-    /* Grid and sections */
     section{margin-top:28px}
     .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     .section-title{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:22px;margin:0 0 8px}
 
-    /* Services cards */
     .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:12px}
-    .service{background:linear-gradient(180deg,rgba(255,255,255,0.015),transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,215,0,0.03);transition:transform .22s ease,box-shadow .22s}
+    .service{background:linear-gradient(180deg,rgba(255,255,255,0.015),transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,215,0,0.03);transition:transform .22s,box-shadow .22s}
     .service:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(176,141,47,0.06)}
     .service h4{font-family:'Cormorant Garamond',serif;color:var(--gold);margin:0 0 8px}
 
-    /* FAQ */
     .faq-item{background:transparent;border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,0.03)}
     .faq-q{display:flex;justify-content:space-between;cursor:pointer;padding:6px 0}
-    .faq-a{max-height:0;overflow:hidden;transition:max-height .28s ease,padding .28s}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .28s,padding .28s}
     .faq-open .faq-a{padding-top:8px;max-height:400px}
 
-    /* Contact form */
     label{display:block;margin-bottom:6px;color:rgba(255,255,255,0.8);font-size:14px}
     input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
     textarea{min-height:120px;resize:vertical}
 
-    /* Footer */
     footer{margin-top:36px;color:rgba(255,255,255,0.6);font-size:14px;text-align:center;padding-bottom:32px}
 
-    /* Animations / reveal */
-    .reveal{opacity:0;transform:translateY(18px);transition:transform .55s ease,opacity .55s ease}
+    .reveal{opacity:0;transform:translateY(18px);transition:transform .55s,opacity .55s}
     .reveal.visible{opacity:1;transform:translateY(0)}
 
-    /* Responsive */
     @media(max-width:980px){
       .hero{grid-template-columns:1fr}
-      .services-grid{grid-template-columns:1fr;gap:12px}
+      .services-grid{grid-template-columns:1fr}
       nav{display:none}
       .menu-toggle{display:block}
       .mobile-nav{display:flex}
     }
-
     @media(min-width:981px){
       .mobile-nav{display:none}
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <header>
@@ -118,7 +107,6 @@
         <a class="cta-btn" href="#contact">Get a site</a>
       </nav>
 
-      <!-- Mobile -->
       <button class="menu-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
     </header>
 
@@ -156,7 +144,7 @@
         <div style="color:rgba(255,255,255,0.9);font-size:14px">Email: <strong><a href="mailto:xatekstudio@gmail.com" style="color:var(--gold)">xatekstudio@gmail.com</a></strong></div>
         <div style="color:rgba(255,255,255,0.9);font-size:14px">WhatsApp: <strong><a href="https://wa.me/8801750722629" style="color:var(--gold)" target="_blank">+8801750722629</a></strong></div>
         <div style="height:12px"></div>
-        <div style="font-size:13px;color:rgba(255,255,255,0.7)">I make websites for anyone and anything — no questions asked. DM on Instagram or email to get a quick quote.</div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.7)">I make websites for anyone and anything — no questions asked.</div>
       </aside>
     </main>
 
@@ -164,23 +152,6 @@
     <section id="about" class="card reveal">
       <h2 class="section-title">About XatekStudio</h2>
       <p class="lead">I'm a small website maker and designer from Bangladesh. I support small businesses and anyone who wants a website — with pricing kept low by using GitHub Pages.</p>
-
-      <div class="grid" style="margin-top:14px">
-        <div>
-          <h3 style="color:var(--gold);margin-bottom:8px">What I build</h3>
-          <ul>
-            <li>Static business sites (portfolio, shop front, service pages)</li>
-            <li>Landing pages for campaigns</li>
-            <li>Simple blogs or documentation sites</li>
-            <li>Sites submitted to Google Search Console for indexing</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 style="color:var(--gold);margin-bottom:8px">How I work</h3>
-          <p style="color:rgba(255,255,255,0.85)">I code sites using modern front-end tools. You’ll get clean, fast-loading pages. I can update content, add forms, or connect basic analytics. Pricing stays low because I publish through GitHub Pages and keep infrastructure minimal.</p>
-        </div>
-      </div>
     </section>
 
     <!-- SERVICES -->
@@ -191,17 +162,17 @@
       <div class="services-grid">
         <div class="service">
           <h4>Starter Site</h4>
-          <p style="color:rgba(255,255,255,0.85)">1–3 pages, responsive, GitHub Pages hosting & basic SEO submission.</p>
+          <p>1–3 pages, responsive, GitHub Pages hosting & basic SEO submission.</p>
         </div>
 
         <div class="service">
           <h4>Business Package</h4>
-          <p style="color:rgba(255,255,255,0.85)">Up to 6 pages, contact form, Google Search Console setup, content updates.</p>
+          <p>Up to 6 pages, contact form, Google Search Console setup, content updates.</p>
         </div>
 
         <div class="service">
           <h4>Custom Builds</h4>
-          <p style="color:rgba(255,255,255,0.85)">Custom features, blog or docs, additional integrations (analytics, simple CMS).</p>
+          <p>Custom features, blog or docs, additional integrations (analytics, simple CMS).</p>
         </div>
       </div>
     </section>
@@ -210,77 +181,53 @@
     <section id="faq" class="card reveal">
       <h2 class="section-title">FAQ</h2>
 
-      <div class="grid">
-        <div>
-          <div class="faq-item" id="f1">
-            <div class="faq-q" onclick="toggleFaq('f1')"><div><strong>How long does a site take?</strong></div><div class="sign">+</div></div>
-            <div class="faq-a">Typically 1–3 days for a simple site depending on revisions and content readiness.</div>
-          </div>
+      <div class="faq-item" id="f1">
+        <div class="faq-q" onclick="toggleFaq('f1')"><strong>How long does a site take?</strong><div class="sign">+</div></div>
+        <div class="faq-a">Typically 1–3 days for a simple site.</div>
+      </div>
 
-          <div style="height:12px"></div>
+      <div class="faq-item" id="f2" style="margin-top:12px">
+        <div class="faq-q" onclick="toggleFaq('f2')"><strong>What do you need to start?</strong><div class="sign">+</div></div>
+        <div class="faq-a">Pages, text, images, logo, or examples you like.</div>
+      </div>
 
-          <div class="faq-item" id="f2">
-            <div class="faq-q" onclick="toggleFaq('f2')"><div><strong>What do you need to start?</strong></div><div class="sign">+</div></div>
-            <div class="faq-a">A brief: pages to include, text, logo (PNG/SVG), images, and any reference sites you like. If you don't have assets I can help create simple visuals.</div>
-          </div>
-        </div>
+      <div class="faq-item" id="f3" style="margin-top:12px">
+        <div class="faq-q" onclick="toggleFaq('f3')"><strong>How much does it cost?</strong><div class="sign">+</div></div>
+        <div class="faq-a">Very cheap because hosting is via GitHub Pages.</div>
+      </div>
 
-        <div>
-          <div class="faq-item" id="f3">
-            <div class="faq-q" onclick="toggleFaq('f3')"><div><strong>How much does it cost?</strong></div><div class="sign">+</div></div>
-            <div class="faq-a">Prices start very low because hosting is done via GitHub Pages. Exact quote depends on pages and features — DM on Instagram or email with your brief for a quick quote.</div>
-          </div>
-
-          <div style="height:12px"></div>
-
-          <div class="faq-item" id="f4">
-            <div class="faq-q" onclick="toggleFaq('f4')"><div><strong>Will my site appear on Google?</strong></div><div class="sign">+</div></div>
-            <div class="faq-a">Yes — I can submit the site to Google Search Console for indexing and help with basic SEO best practices.</div>
-          </div>
-        </div>
+      <div class="faq-item" id="f4" style="margin-top:12px">
+        <div class="faq-q" onclick="toggleFaq('f4')"><strong>Will my site appear on Google?</strong><div class="sign">+</div></div>
+        <div class="faq-a">Yes — I submit it to Google Search Console.</div>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="card reveal">
       <h2 class="section-title">Contact</h2>
-      <p class="lead">Ready to start? DM on Instagram (@XatekStudio) or email <a href="mailto:xatekstudio@gmail.com" style="color:var(--gold)">xatekstudio@gmail.com</a>. Or use the form below.</p>
+      <p class="lead">DM on Instagram (@XatekStudio) or email <a href="mailto:xatekstudio@gmail.com" style="color:var(--gold)">xatekstudio@gmail.com</a>.</p>
 
-      <div class="grid">
-        <div>
-          <form action="mailto:xatekstudio@gmail.com" method="post" enctype="text/plain">
-            <label for="name">Your name</label>
-            <input id="name" name="name" placeholder="Your full name" required>
+      <form action="mailto:xatekstudio@gmail.com" method="post" enctype="text/plain">
+        <label>Your name</label>
+        <input name="name" required>
 
-            <label for="email">Your email</label>
-            <input id="email" name="email" placeholder="you@example.com" required>
+        <label>Your email</label>
+        <input name="email" required>
 
-            <label for="message">Message / project brief</label>
-            <textarea id="message" name="message" placeholder="Tell me what you need — pages, examples, deadline, budget..." required></textarea>
+        <label>Message / project brief</label>
+        <textarea name="message" required></textarea>
 
-            <div style="margin-top:12px">
-              <button class="cta-btn" type="submit">Send email</button>
-              <a class="nav-link" style="display:inline-block;margin-left:10px" href="https://wa.me/8801750722629?text=Hello%20Aydin%2C%20I'm%20interested%20in%20a%20website" target="_blank">WhatsApp</a>
-            </div>
-          </form>
-        </div>
+        <button class="cta-btn" type="submit" style="margin-top:12px">Send email</button>
+      </form>
 
-        <div>
-          <div style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:10px">
-            <h4 style="margin:0 0 8px;color:var(--gold)">Direct links</h4>
-            <div style="color:rgba(255,255,255,0.9)">Instagram: <a href="https://www.instagram.com/xatekstudio" target="_blank" style="color:var(--gold)">@XatekStudio</a></div>
-            <div style="color:rgba(255,255,255,0.9)">Email: <a href="mailto:xatekstudio@gmail.com" style="color:var(--gold)">xatekstudio@gmail.com</a></div>
-            <div style="color:rgba(255,255,255,0.9)">WhatsApp: <a href="https://wa.me/8801750722629" style="color:var(--gold)" target="_blank">+8801750722629</a></div>
-            <div style="height:10px"></div>
-            <div style="color:rgba(255,255,255,0.78);font-size:13px">Note: Phone is WhatsApp only. Reply times are usually quick.</div>
-          </div>
-        </div>
-      </div>
+      <p style="margin-top:18px;color:rgba(255,255,255,0.78)">WhatsApp: 
+        <a href="https://wa.me/8801750722629" style="color:var(--gold)">+8801750722629</a>
+      </p>
     </section>
 
     <footer>
-      © XatekStudio — Built & maintained by Aydin Hossain
-      <div style="margin-top:6px;color:rgba(255,255,255,0.6);font-size:13px">I use GitHub Pages for publishing and can submit the site to Google Search Console on request.</div>
+      © XatekStudio — Built & maintained by Aydin Hossain<br>
+      <span style="font-size:13px;color:rgba(255,255,255,0.6)">GitHub Pages hosting + Google Search Console ready.</span>
     </footer>
   </div>
 
@@ -288,52 +235,26 @@
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const mobileNav = document.querySelector('.mobile-nav');
-    if(menuToggle){
-      menuToggle.addEventListener('click', ()=>{
-        const open = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', !open);
-        if(mobileNav.style.display === 'flex') mobileNav.style.display = 'none';
-        else mobileNav.style.display = 'flex';
-      });
-    }
+    menuToggle.addEventListener('click', ()=>{
+      const open = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !open);
+      mobileNav.style.display = mobileNav.style.display === 'flex' ? 'none' : 'flex';
+    });
 
-    // FAQ toggle
     function toggleFaq(id){
       const el = document.getElementById(id);
-      if(!el) return;
       el.classList.toggle('faq-open');
       const sign = el.querySelector('.sign');
-      if(sign) sign.textContent = el.classList.contains('faq-open') ? '−' : '+';
+      sign.textContent = el.classList.contains('faq-open') ? '−' : '+';
     }
 
-    // Reveal on scroll (medium animations)
     const observer = new IntersectionObserver((entries)=>{
       entries.forEach(entry=>{
         if(entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, {threshold: 0.08});
-
-    document.querySelectorAll('.reveal').forEach(el=>{
-      observer.observe(el);
-    });
-
-    // Smoothly close mobile nav after clicking a link
-    document.querySelectorAll('.mobile-nav a').forEach(a=>{
-      a.addEventListener('click', ()=>{ mobileNav.style.display = 'none'; menuToggle.setAttribute('aria-expanded', false); });
-    });
-
-    // Slight fix for mailto forms on some mobile clients: show an alert if no mail client
-    const form = document.querySelector('form[action^="mailto:"]');
-    if(form){
-      form.addEventListener('submit', (e)=>{
-        // Allow normal mailto behavior — but if the browser prevents it, give a gentle hint
-        setTimeout(()=> {
-          // If page hasn't changed in 1.2s, likely no mail app opened — show small hint
-          // (This is passive — no blocking)
-          // Note: cannot reliably detect mail client across all browsers; this is just a helpful hint.
-        }, 1200);
-      });
-    }
+    }, {threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
   </script>
+
 </body>
 </html>
